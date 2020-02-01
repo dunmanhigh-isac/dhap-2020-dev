@@ -1,0 +1,107 @@
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+article.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    font-size: 15pt;
+    width: 80vw;
+    background: var(--base4);
+    font-family: "TwCentMT";
+    box-shadow: 0 0 2vh 0.25vh #222;
+    margin-bottom: 5vh;
+    padding-bottom: 5vh;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 50vh;
+}
+
+article.content > * {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: 80vw;
+}
+
+
+
+
+article.content h1, article.content h2, article.content h3 {
+    font-family: "LemonMilk";
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+article.content h1 {
+    font-size: 10vmin;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--accent2);
+}
+
+article.content h2 {
+    /* TODO: remove this declaration on launch; */
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
+
+article.content p {
+    text-align: justify;
+}
+
+article.content a {
+    color: var(--accent2);
+    text-decoration: underline;
+}
+
+article.content .image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+}
+
+article.content .image img {
+    width: 30vw;
+}
+
+article.content > ul {
+    margin-left: 5vw;
+}
+
+article.content > ol {
+    margin-left: 5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    article.content {
+        width: 100vw;
+        margin-top: 0vh;
+        min-height: 65vh;
+    }
+
+    article.content > * {
+        max-width: 100vw;
+    }
+
+    article.content .image img {
+        width: 50vw;
+    }
+
+}
+
+hr {
+    width: 60vw;
+    border-color: var(--accent2);
+}
+
+strong {
+    color: var(--accent2);
+    font-weight: normal;
+}
+

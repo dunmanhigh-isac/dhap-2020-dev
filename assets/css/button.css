@@ -1,0 +1,28 @@
+.button {
+    background: var(--accent2);
+    padding: 10px;
+    color: #eee;
+    font-family: "LemonMilk";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5vh;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-wrapper {
+    padding: 0 !important;
+    align-self: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .button-wrapper {
+        width: 100%;
+    }
+}

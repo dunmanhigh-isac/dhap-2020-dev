@@ -1,0 +1,62 @@
+/**
+ * Initialise color vars, as well as other defaults
+ * these are given as R,G,B triplets instead of normal #hex colors,
+ * to facilitate using them with rgba().
+ * to use as rgb:
+ * rgb(var(--base1));
+ * to use as rgba:
+ * rgba(var(--base1), <alpha>);
+ */
+
+:root {
+    /* Darkest base color, used for overall site backgrounds? */
+    --base1: rgb(58, 86, 145);
+    /* Slightly lighter base color, used for button backgrounds? */
+    --base2: rgb(77, 101, 153);
+    /* Much lighter base color, used for text background */
+    --base3: rgb(187, 218, 234);
+    /* Light orange-ish background for content */
+    --base4: #fff;
+    /* Lighter accent color, for content background */
+    --accent1: #f79e76;
+    /* More intense accent, for highlighted blocks */
+    --accent2: #C73B1F;
+}
+
+@font-face {
+    font-family: "LemonMilk";
+    src: url(LemonMilklight.otf);
+}
+
+@font-face {
+    font-family: "TwCentMT";
+    src: url(TwCenMT-Regular.woff);
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: "TwCentMT";
+    background: url(../img/background.png);
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-size: 200% auto;
+    }
+}
+
+main {
+    width: 100vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

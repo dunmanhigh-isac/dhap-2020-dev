@@ -1,0 +1,354 @@
+#header__title {
+    padding-left: 2.5vw;
+}
+
+#hero {
+    height: 85vh;
+    width: 100%;
+    /*background-image: url(/assets/img/title_background.png);*/
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/**
+ * Countdown styles
+ */
+#countdown-container {
+    background-image: none;
+    background: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: left;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    height: 40vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15vh;
+    animation: leaf-wipe 2s ease-in-out;
+    overflow-x: hidden;
+    flex-wrap: none;
+    font-family: "LemonMilk"
+}
+
+@keyframes leaf-wipe {
+    from { transform: translateX(-40vw) }
+    to { transform: translateX(0); }
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+#countdown-container * {
+    /*                        v delay the animation for 2s */
+    animation: fade 0.5s linear 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.countdown__digits {
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+    width: 10vw;
+    color: #eee;
+    border-radius: 1vw;
+    padding: 1vh;
+    text-transform: uppercase;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+#hero svg {
+    position: absolute;
+    top: -1vw;
+    left: -1vw;
+    width: 12vw;
+    height: 12vw;
+    z-index: -1;
+}
+
+rect, circle {
+    fill: none;
+    stroke: var(--accent1);
+    stroke-opacity: 0.5;
+    stroke-width: 10px;
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s;
+    rx: 2vw;
+    ry: 2vw;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.countdown__digits span {
+    font-size: 70pt;
+
+}
+
+#countdown__over {
+    display: none;
+    padding: 5px;
+}
+
+#countdown__over h1 {
+    text-align: center;
+    font-size: 30pt;
+    color: #eee;
+}
+
+#countdown__over p {
+    text-align: center;
+    color: #eee;
+}
+
+#countdown__over a {
+    color: var(--accent1);
+}
+
+
+#countdown__subtitle {
+    background: rgba(204, 204, 204, 0.6);
+    border-radius: 10px;
+    font-size: 30pt;
+    margin-top: 3vh;
+    padding: 1vh;
+}
+
+/**
+ * Welcome address styles
+ */
+
+#welcome-container {
+    width: 40vw;
+    height: 85vh;
+    background: url(../img/landing_welcome.png);
+    background-size: cover;
+    background-position: right;
+    animation: right-wipe 1.5s ease-in-out 2s;
+    animation-fill-mode: both;
+    box-shadow: 0 0 4vw 0.5vw #222
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    animation: fade 0.5s linear 3.5s;
+    animation-fill-mode: both;
+    height: 80vh;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    overflow-y: auto;
+    color: #ddd;
+}
+
+.welcome__greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "LemonMilk";
+}
+
+.welcome__greeting h2 {
+    font-size: 30pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.welcome__greeting h1 {
+    font-size: 35pt;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-weight: normal;
+}
+
+.welcome__link {
+    flex-basis: 10%;
+}
+
+
+#welcome-address__scroll-prompt {
+    display: none;
+}
+
+#welcome-address-container {
+    display: none;
+}
+
+@keyframes right-wipe {
+    from { width: 0; }
+    to { width: 40vw; }
+}
+
+@media screen and (max-width: 1000px) {
+    #hero {
+        display: block;
+        position: relative;
+        height: auto;
+        background-size: auto 100vh;
+        background-repeat: no-repeat;
+        background-position: center top;
+        animation: prevent-scroll 0.2s linear 3s;
+        animation-fill-mode: both;
+        padding-top: 30vh;
+    }
+
+    @keyframes prevent-scroll {
+        from { max-height: 100vh; overflow-y: hidden; }
+        to { max-height: none; }
+    }
+
+    #countdown-container {
+        background-size: 80vw;
+        background-position: left center;
+        animation: leaf-wipe 1s ease-out 1s;
+        animation-fill-mode: both;
+        width: 80vw;
+        height: 40vh;
+    }
+
+    #countdown-container * {
+        animation: fade 0.5s linear 1.5s;
+        animation-fill-mode: both;
+    }
+
+    #countdown {
+        justify-content: space-around;
+    }
+
+    #hero svg {
+        display: none;
+    }
+
+    #countdown__minutes {
+        display: none;
+    }
+
+    #countdown__over h1 {
+        font-size: 25pt;
+    }
+
+    .countdown__digits {
+        margin: 1vw;
+        width: auto;
+        height: auto;
+    }
+
+    @keyframes leaf-wipe {
+        from { transform: translateX(-80vw); }
+        to { transform: translateX(0); }
+    }
+
+    #welcome-container {
+        display: none;
+    }
+
+    #welcome-address__scroll-prompt {
+        position: absolute;
+        top: 80vh;
+        height: 18vh;
+        padding-bottom: 2vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20pt;
+        background: linear-gradient(to top, var(--base4) 85%, rgba(0, 0, 0, 0));
+        animation: fade 0.5s linear 3s;
+        animation-fill-mode: both;
+        color: #222;
+        font-family: "LemonMilk";
+   }
+
+
+    #welcome-address-container {
+        display: block;
+        animation: fade 0.5s linear 3s, fade-address 0s linear 3s;
+        animation-fill-mode: both;
+        width: 100vw;
+        height: auto;
+        margin-top: 30vh;
+        padding-top: 5vh;
+        background: var(--base4);
+        font-family: "TwCentMT";
+    }
+
+    @keyframes fade-address {
+        from { height: 0; padding-top: 0; }
+        to { height: auto; padding-top: 5vh; }
+    }
+
+    #welcome-address {
+        padding: 5vw;
+        height: auto;
+        color: #222;
+        text-align: justify;
+    }
+
+    .welcome-address__greeting {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .welcome-address__greeting h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: normal;
+        font-family: "LemonMilk";
+    }
+
+    .welcome-address__greeting h1 {
+        font-size: 20vw;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: "LemonMilk";
+        font-weight: normal;
+    }
+
+    .welcome-address__title {
+        display: block;
+        position: relative;
+        width: auto;
+        height: auto;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        text-align: center;
+        color: var(--accent2);
+    }
+
+    #signoff {
+        text-align-last: right;
+        align-self: flex-end;
+    }
+
+}
