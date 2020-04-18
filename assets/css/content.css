@@ -105,3 +105,32 @@ strong {
     font-weight: normal;
 }
 
+td, tr, th{
+    padding: 10px;
+    font-family: "TwCentMT";
+}
+
+th{
+    font-size: 1.5em;
+}
+
+td{
+    font-size: 1.2em;
+}
+
+ol{
+    line-height: 1.5em;
+}
+
+.large{
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.medium{
+    font-size: 1.3em;
+}

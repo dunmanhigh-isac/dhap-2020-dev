@@ -168,16 +168,3 @@ li {
                         25% 60%);
     }
 }
-
-td, tr, th{
-    padding: 10px;
-    font-family: "TwCentMT";
-}
-
-th{
-    font-size: 1.5em;
-}
-
-td{
-    font-size: 1.2em;
-}
