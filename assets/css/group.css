@@ -66,3 +66,36 @@ article.content .person__description > h2 {
     }
 
 }
+
+.people{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.people__image {
+    flex-basis: 70%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.people__image > img {
+    width: 100%;
+    /*border-radius: 50%;*/
+}
+
+.people_description {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    align-items: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.people__description > h3 {
+    margin-top: 0px;
+    font-size: 15pt;
+    text-align: center;
+}
