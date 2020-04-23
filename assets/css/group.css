@@ -74,6 +74,17 @@ article.content .person__description > h2 {
     margin-top: 5vh;
 }
 
+.people:nth-child(odd) {
+    flex-direction: row;
+    text-align-last: left;
+}
+
+.people:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align-last: right;
+}
+
+
 .people__image {
     flex-basis: 70%;
     margin-left: 1vw;
