@@ -56,7 +56,7 @@ article.content {
 
 #password-form {
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -118,14 +118,14 @@ article.content {
 
 .council {
     width: 100%;
-    height: 20vmin;
+    height: 50%;
     border-top: 1px solid var(--accent2);
     display: flex;
     flex-direction: row;
 }
 
 .council__title {
-    width: 33%;
+    width: 50%;
     display: flex;
     justify-content: center;
     -ms-align-items: center;
