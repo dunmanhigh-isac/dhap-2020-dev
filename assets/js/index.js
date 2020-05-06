@@ -1,6 +1,6 @@
 let launchDate = new Date("2019-02-10T00:00+08:00");
-let startDate = new Date("2020-06-02T07:45+08:00");
-let endDate = new Date("2019-06-04T21:00+08:00");
+let startDate = new Date("2020-05-18T00:00+08:00");
+let endDate = new Date("2020-06-13T00:00+08:00");
 
 let showCountdown = function() {
     let diffToStart = startDate - new Date();
